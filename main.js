@@ -14,6 +14,8 @@ console.log(string);
 // Dùng backtick để làm việc với string và biến dễ dàng hơn
 console.log(`Toi ten la: ${myName}, năm nay tôi ${age}`);
 
-// Dùng thuộc tính length để lấy độ dài của chuỗi (Length là thuộc tính
+// [KIỂU DỮ LIỆU STRING]
+
+// Dùng thuộc tính "length" để lấy độ dài của chuỗi (Length là thuộc tính
 // của kiểu dữ liệu string)
 console.log(myName.length);
