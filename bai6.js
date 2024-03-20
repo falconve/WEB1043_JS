@@ -48,11 +48,29 @@ test();
 
 // biến toàn cục
 let globalVar = "Tuan Anh";
-console.log("Outside function:", globalVar); // Tuan Anh
+console.log("Ngoài hàm: ", globalVar); // Tuan Anh
 
 function creatingNewScope(x) {
-  console.log("Access to global vars inside function.", globalVar);
+  console.log("Bên trong hàm", globalVar);
 }
 
 creatingNewScope("Tri Duc");
-console.log("Still available:", globalVar); // kết quả Tuan Anh
+console.log("Vẫn ở đây", globalVar); // kết quả Tuan Anh
+
+// [EVENT]
+// onclick là sự kiện mà khi người dùng ấn vào sẽ gọi hàm do mình tự định nghĩa hoặc gọi hàm có sẵn của JS
+// Sử dụng hàm có sẵn của JS là alert
+<button onclick="alert('Hello')">An vao di</button>;
+
+// Sử dụng hàm tự định nghĩa
+function sayHello() {
+  console.log("hello");
+}
+
+<button onclick="sayHello()">An vao di</button>;
+
+// Sự kiện onmouseover hoạt động khi người dùng trỏ chuột vào element
+<button onmouseover="alert('Hello')">An vao di</button>;
+
+// Sự kiện onmouseout hoạt động khi người dùng di chuột ra ngoài element
+<button onmouseout="alert('Hello')">An vao di</button>;

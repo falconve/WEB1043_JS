@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="hcn()">TÍnh diện tích & chu vi hcn</button>
+  </body>
+  <script>
+    // Tạo 1 nút khi người dùng ấn vào sẽ hiên thị lên hộp thoại nhập chiều dài & chiều rộng
+    // Lưu chiều dài & chiều rộng vào object có tên hcn. Trong object sẽ có phương thức tính diện tích & chu vi
+    // b1: tạo 1 file html có thẻ button
+    // b2: tạo 1 function
+    // trong function có 1 biến lưu object
+    // trong object thì có: thuộc tính chiều dài & chiêu rộng. và 2 phương thúc tính diện tích & chu vi
+    function hcn() {
+      //hiên thị lên hộp thoại nhập chiều dài & chiều rộng
+      let chieudai = parseInt(prompt("nhập chiều dài"));
+      let chieurong = parseInt(prompt("nhập chiều rộng"));
+
+      let hcn = {
+        chieudai: chieudai,
+        chieurong: chieurong,
+
+        dientich: function () {
+          return this.chieudai * this.chieurong;
+        },
+        chuvi: function () {
+          return (this.chieudai + this.chieurong) * 2;
+        },
+      };
+
+      alert(`Chieu dai: ${hcn.chieudai}`);
+      alert(`Chieu dai: ${hcn.chieurong}`);
+      alert(`Dien tich: ${hcn.dientich()}`);
+      alert(`Chu vi: ${hcn.chuvi()}`);
+    }
+  </script>
+</html>
