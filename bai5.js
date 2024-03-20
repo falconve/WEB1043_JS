@@ -79,3 +79,28 @@
 for (let i = 0; i <= 10; i++) {
   console.log(i);
 }
+
+// Sử dụng vòng lặp for để in ra bảng cửu chương từ 1 tới 9
+for (let i = 1; i < 10; i++) {
+  console.log(`Bảng cưu chương của ${i}`);
+  for (let j = 1; j <= 10; j++) {
+    // 1 x 1 = 1
+    console.log(`${i} x ${j} = ${i * j}`);
+  }
+}
+
+// Sử dụng vòng lặp for để in ra các phần tử trong mảng
+// Khai báo 1 mảng tên các con vật
+// In ra tên các con vật trong mảng dùng vòng lặp FOR
+let animalList = ["meo", "chuot", "ga"];
+
+// animalList.length là để lấy ra độ dài của mảng
+for (let i = 0; i < animalList.length; i++) {
+  // animalList[i] để in ra các phần tử trong mảng animalList
+  console.log(animalList[i]);
+}
+
+// dùng for .. of để in ra các phần tử ở trong mảng
+for (let animal of animalList) {
+  console.log(animal);
+}
