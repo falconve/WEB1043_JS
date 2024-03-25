@@ -40,10 +40,39 @@ function Cat(ten, tuoi, cannang) {
 let cat1 = new Cat("meo", 2, 3);
 console.log(cat1);
 
-// Tạo 1 nút khi người dùng ấn vào sẽ hiên thị lên hộp thoại nhập chiều dài & chiều rộng
-// Lưu chiều dài & chiều rộng vào object có tên hcn. Trong object sẽ có phương thức tính diện tích & chu vi
-// b1: tạo 1 file html có thẻ button
-// b2: tạo 1 function
-// trong function có 1 biến lưu object
-// trong object thì có: thuộc tính chiều dài & chiêu rộng. và 2 phương thúc tính diện tích & chu vi
-//
+// Dùng for in để lấy ra phần tử trong object
+// Khai báo object
+let objListNew = {
+  ten: "xe mÁy AB",
+  hang: "honda",
+  mau: "trẮng",
+};
+// Lấy ra key trong obj
+for (let obj in objListNew) {
+  // Lấy ra key trong obj
+  console.log(obj); // ten, hang, mau
+}
+
+for (let obj in objListNew) {
+  // Lấy ra value trong obj
+  console.log(objListNew[obj]); // xe máy AB, honda, trẮng
+}
+
+// Lấy ra cả key và value
+for (let obj in objListNew) {
+  console.log(`${obj} : ${objListNew[obj]}`);
+}
+
+// Cách truy xuất dữ liệu trong object và từ object truy xuất
+// dữ liệu vào mảng
+company = {
+  companyName: "Healthy Candy",
+  activities: [
+    "food manufacturing",
+    "improving kids' health",
+    "manufacturing toys",
+  ],
+  yearOfEstablishment: 2021,
+};
+
+console.log(company.activities[1]); // improving kids' health
