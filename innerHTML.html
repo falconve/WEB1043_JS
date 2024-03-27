@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="anh1"></div>
+    <button onclick="hienThiAnh()">Hiển thị ảnh</button>
+    <script>
+      function hienThiAnh() {
+        // Bước 1. Dùng querySelector để truy xuất vào div có id "anh"
+        let divAnh = document.querySelector("#anh");
+
+        // Bước 2. Kiểm tra xem có tồn tại
+        if (divAnh) {
+          // Bước 3. thêm sửa xoá trong DOM
+          divAnh.innerHTML = `<img style="width: 300px; height: 300px;"src="https://media-cdn-v2.laodong.vn/storage/newsportal/2023/8/26/1233821/Giai-Nhi-1--Nang-Tre.jpg" />`;
+        }
+        // Sử dụng thuộc tính innerHTML đẻ chèn thẻ img vào trong thẻ div có id là "anh"
+      }
+    </script>
+  </body>
+</html>

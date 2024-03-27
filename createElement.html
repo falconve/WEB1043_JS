@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="noidung">
+      <p>Hôm nay</p>
+      <p>Trời</p>
+      <p>Đẹp</p>
+    </div>
+    <button onclick="taoThem()">Tạo thẻ thêm thẻ p</button>
+  </body>
+  <script>
+    // Tạo thẻ <p></p> bằng cách sư dụng thuộc tính createElement
+    let pElement = document.createElement("p");
+
+    // Cho thẻ <p> vào thẻ body
+    document.body.appendChild(pElement);
+
+    // Tạo nội dung cho thẻ p
+    let pText = document.createTextNode(`Quá !!!`);
+
+    // Sau khi tạo nội dung thì chèn vào thẻ p
+    pElement.appendChild(pText);
+
+    // khi ấn vào nút "Tạo thẻ p" thì sẽ tạo thêm 1 thẻ p nằm trong div có id là "nội dung"
+    function taoThem() {
+      // Tạo thẻ p
+      let newPElement = document.createElement("p");
+
+      // Thêm nội dung thẻ p
+      let newPElementText = document.createTextNode("Thẻ p mới");
+
+      // Cho nội dung vào trong thẻ p
+      newPElement.appendChild(newPElementText);
+
+      // lấy ra div có id là nội dung
+      let divNoiDung = document.querySelector("#noidung");
+
+      // và chèn thẻ p vào trong div có id là nội dung
+      divNoiDung.appendChild(newPElement);
+    }
+  </script>
+</html>
