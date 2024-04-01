@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Nội dung 1</h1>
+    <h1>Nội dung 2</h1>
+    <h1>Nội dung 3</h1>
+
+    <button id="nut">Ấn vào để đổi màu</button>
+
+    <script>
+      let button = document.querySelector("#nut");
+
+      let index = 0;
+      function doiMau() {
+        let h1 = document.querySelectorAll("h1"); // 3
+
+        // reset tất thẻ h1 thành màu đen
+        if (index >= h1.length) {
+          index = 0;
+        }
+        console.log(index);
+
+        for (let i = 0; i < h1.length; i++) {
+          h1[i].style.color = "black";
+        }
+        // đổi màu ở vị trí index khi người dùng ấn vào sẽ tăng index lên
+        h1[index].style.color = "red";
+        index++;
+      }
+
+      if (button) {
+        button.addEventListener("click", doiMau);
+      }
+    </script>
+  </body>
+</html>

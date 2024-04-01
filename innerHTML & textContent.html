@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="pElement1">Đây là thẻ p</p>
+
+    <p style="display: none" id="pElement2">Thẻ p này bị ẩn đi rồi</p>
+
+    <button id="nut">Ấn vào</button>
+
+    <!-- <script src="bai8.js"></script> -->
+    <script>
+      // Lấy ra nội dung của thẻ p
+      // Cách 1
+      document.querySelector("#pElement1").textContent;
+
+      // Cách 2
+      document.querySelector("#pElement1").innerText;
+
+      // Sự khác nhau của textContent và innerText
+      // innerText chỉ lấy ra dc những text hiển thị trên trang mà người dùng nhìn thấy
+      // còn textContent sẽ lấy ra cả những đoạn text bị ẩn đi
+
+      let btn = document.querySelector("#nut");
+
+      function hienThiPopup() {
+        alert("OK");
+      }
+
+      if (btn) {
+        // Sử dụng addEventListener để thêm sự kiện click
+        btn.addEventListener("click", hienThiPopup);
+      }
+
+      // Sủ dụng style.color để đổi màu text
+      document.querySelector("._8eso").style.color = "yellow";
+    </script>
+  </body>
+</html>
