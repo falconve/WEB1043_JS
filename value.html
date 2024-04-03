@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">Họ và tên</label>
+    <input type="text" id="name" />
+
+    <br />
+    <label>Giới tính</label>
+    <input name="gioitinh" type="radio" value="nam" />Nam
+    <input name="gioitinh" type="radio" value="nu" />Nữ
+
+    <br />
+    <label> Lựa chọn</label>
+    <select id="select-option">
+      <option>Lựa chọn 1</option>
+      <option>Lựa chọn 2</option>
+    </select>
+    <br />
+    <button>Gửi dữ liệu</button>
+    <br />
+    <table border="1">
+      <thead>
+        <td>Họ tên</td>
+        <td>Giới tính</td>
+        <td>Lựa chọn</td>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      //   //Để lấy ra giá trị ô input dùng .value
+      //   let fullName = document.querySelector("#name").value;
+      //   //console.log(fullName);
+
+      //   // Lấy ra value của input với type=radio
+      //   let gioiTinh = document.querySelector(`[name='gioitinh']:checked`).value;
+
+      //   // Lấy ra value của option
+      //   document.querySelector("#select-option").value;
+
+      function layDuLieu() {
+        let fullName = document.querySelector("#name").value;
+        let gioiTinh = document.querySelector(
+          `[name='gioitinh']:checked`
+        ).value;
+        let luaChon = document.querySelector("#select-option").value;
+
+        let ketQua = `
+        <td>${fullName}</td>
+        <td>${gioiTinh}</td>
+        <td>${luaChon}</td>
+        `;
+
+        let table = document.querySelector("table > tbody");
+        table.innerHTML = ketQua;
+      }
+
+      let button = document.querySelector("button");
+      if (button) {
+        button.addEventListener("click", layDuLieu);
+      }
+    </script>
+  </body>
+</html>

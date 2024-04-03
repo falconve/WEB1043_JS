@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nội dung 1</h1>
+    <button>Ẩn hiện class</button>
+    <script>
+      // Đổi màu nền cho thẻ h1 sang vàng
+      //document.querySelector("h1").style.backgroundColor("red");
+
+      // Thêm class cho thẻ h1
+      //document.querySelector("h1").classList.add("hide");
+
+      // Xoá class cho thẻ h1
+      //document.querySelector("h1").classList.remove("hide");
+
+      let button = document.querySelector("button");
+
+      function anHien() {
+        let h1 = document.querySelector("h1");
+        if (h1) {
+          // Vừa thêm và vừa xoá class
+          h1.classList.toggle("hide");
+        }
+      }
+
+      if (button) {
+        button.addEventListener("click", anHien);
+      }
+    </script>
+  </body>
+</html>
